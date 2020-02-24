@@ -15,6 +15,8 @@ The current state of the product involves a front-end written in Angular and a b
 ## Data
 
 A json with all a list of logs for a bunch of models, containing the following properties:
+
+```
 [
 {
 "predictionId": 1,
@@ -25,6 +27,7 @@ A json with all a list of logs for a bunch of models, containing the following p
 },
 …
 ]
+```
 
 ## Exercise
 
@@ -32,14 +35,13 @@ Pull the repository
 
 Create a simple HTML page with a few buttons:
 
-[GET ALL LOGS] => Creates a table of all the predictions (with all data) ordered from most recent to most old.
-[GET LOGS FOR ID] => Input an ID and create a table with all predictions for that model ID ordered from most recent to most old.
-[GET STATUS] => Creates a table with each unique model and the status ID and average responseTime
+* [GET ALL LOGS] => Creates a table of all the predictions (with all data) ordered from most recent to most old.
+* [GET LOGS FOR ID] => Input an ID and create a table with all predictions for that model ID ordered from most recent to most old.
+* [GET STATUS] => Creates a table with each unique model and the status ID and average responseTime
 
-Don’t focus on
-Make it look pretty
+> Don’t focus on making it look pretty
 
-Send in your answer by creating a PR in the repo
+**Send in your answer by creating a PR in the repo**
 
 ## Bonus
 
