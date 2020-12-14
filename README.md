@@ -46,7 +46,6 @@ Create an Angular application for the following functionalities:
 
 *Tip: make use of the Angular Material documentation: https://material.angular.io/components/categories*
 
-> Don’t focus on making it look pretty
 
 **Send in your answer by creating a PR in the repo**
 
