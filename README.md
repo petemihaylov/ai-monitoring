@@ -1,6 +1,6 @@
 # Job application case
 
-Good luck with your job application!
+Please read this complete assignment thoroughly before starting. Good luck with your job application!
 
 ## Case description
 
@@ -33,11 +33,18 @@ A json with all a list of logs for a bunch of models, containing the following p
 
 Pull the repository
 
-Create a simple HTML page with a few buttons:
+Create an Angular application for the following functionalities:
 
-* [GET ALL LOGS] => Creates a table of all the predictions (with all data) ordered from most recent to most old.
-* [GET LOGS FOR ID] => Input an ID and create a table with all predictions for that model ID ordered from most recent to most old.
-* [GET STATUS] => Creates a table with each unique model and the status ID and average responseTime
+1. Navigation bar with two links: Predictions and Performance
+2. Create routes and components for the PredictionsComponent and PerformanceComponent
+3. Create the PredictionsComponent with the follow functionalities:
+   * [GET ALL LOGS] => Creates a `MaterialDataTable` of all the predictions (with all data) ordered from most recent to most old.
+   * [GET LOGS FOR ID] => Use a MaterialField and FormGroup to enable to filter for a modelId. The table should then only show predictions for that modelId (ordered from most recent to most old).
+4. Create the PerformanceComponent with the following functionality:
+   * Calculate the average response time per model.
+   * Create a `MaterialDataTable` with the modelId and average responseTime as columns. 
+
+*Tip: make use of the Angular Material documentation: https://material.angular.io/components/categories*
 
 > Don’t focus on making it look pretty
 
