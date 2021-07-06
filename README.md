@@ -44,7 +44,7 @@ A json with all a list of logs for a bunch of models, containing the following p
 Pull the repository
 
 Create an Angular application with the following functionalities:
-**important**: use your creative freedom to show us a bit of you in the assignment (what are you good at, what do you like)
+> **important**: use your creative freedom to show us a bit of you in the assignment (what are you good at, what do you like)
 
 1. Navigation bar with two links: Predictions and Performance
 2. Create routes and components for the PredictionsComponent and PerformanceComponent
