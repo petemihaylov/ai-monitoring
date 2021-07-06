@@ -4,7 +4,7 @@ Please read this complete assignment thoroughly before starting. Good luck with 
 
 ## Warm up (spend max 30 min)
 
-Solve the following programming challenge. Use your current knowledge (try not to use internet). You may program the challenge out in a language of your choice:
+Solve the following programming challenge. Use your current knowledge (try not to use internet). Try to use [TypeScript](https://www.typescriptlang.org/) for your solution:
 Using a sorted array of integers, shuffle the integers to only have unique elements and return the index without using another array.
 * Sample input: [3, 3, 4, 5, 5, 6, 7, 7, 7]
 * Sample output:
@@ -12,9 +12,9 @@ Using a sorted array of integers, shuffle the integers to only have unique eleme
    * Index: 4
 With the sample input, the expected output is an array with unique integers and an index of 4 as shown in the sample output.
 
-## Case description (main part)
+## Case description
 
-The current state of our product involves a front-end written in Angular and a back-end consisting of 9 microservices. These 9 microservices form the back-end and together support the deployment, logging, monitoring and several other important functionalities. However, the product owner has decided that its time to start developing a new functionality, namely extensive monitoring of the current machine learning models in production. The plan is to set-up a new microservice with the following functionalities:
+The current state of our product involves a front-end written in Angular and a back-end consisting of multiple microservices written in TypeScript. These microservices form the back-end and together support the deployment, logging, monitoring and several other important functionalities. However, the product owner has decided that its time to start developing a new functionality, namely extensive monitoring of the current machine learning models in production. The plan is to set-up a new microservice with the following functionalities:
 
 1. Retrieving a list of all the logs.
 2. Retrieving a list of all the logs for a specific model.
@@ -43,7 +43,8 @@ A json with all a list of logs for a bunch of models, containing the following p
 
 Pull the repository
 
-Create an Angular application for the following functionalities:
+Create an Angular application with the following functionalities:
+**important**: use your creative freedom to show us a bit of you in the assignment (what are you good at, what do you like)
 
 1. Navigation bar with two links: Predictions and Performance
 2. Create routes and components for the PredictionsComponent and PerformanceComponent
