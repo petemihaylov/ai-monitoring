@@ -62,3 +62,11 @@ Create an Angular application with the following functionalities:
 ### Bonus
 
 What other opportunities do you see with the data you have? Implement them if you have time left.
+
+## Submission process
+* Create a fork of this repo and add you answers there
+* Create a PR to this repo from you personal fork on your personal branch
+* Send a reminder to us that your PR is ready, so we can merge your PR and update our private submission fork so you submission will not be public.
+
+Good luck!
+
