@@ -1,0 +1,11 @@
+<h2>Monitoring</h2>
+
+<div>
+    <label for="dateRangePicker">Select Date Range:</label>
+    <ng2-datepicker [options]="{ range: true }" (datesUpdated)="onDateRangeChange($event)"></ng2-datepicker>
+</div>
+
+<ngx-charts-line-chart [results]="filteredErrorsData" [xAxis]="showXAxis" [yAxis]="showYAxis" [gradient]="gradient"
+    [legend]="showLegend" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [autoScale]="true" [timeline]="true"
+    [view]="view">
+</ngx-charts-line-chart>
