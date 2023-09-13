@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
-import { CreateModelDto, UpdateModelDto } from 'src/core/dtos';
-import { ModelFactoryService } from 'src/use-cases/model/model-factory.service';
-import { ModelUseCases } from 'src/use-cases/model/model.use-case';
+import { CreateModelDto, UpdateModelDto } from '../core/dtos';
+import { ModelFactoryService } from '../use-cases/model/model-factory.service';
+import { ModelUseCases } from '../use-cases/model/model.use-case';
 
 @Controller('api/model')
 export class ModelController {

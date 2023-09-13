@@ -6,14 +6,14 @@ import { CreateModelDto, UpdateModelDto } from '../../core/dtos';
 export class ModelFactoryService {
   createNewModel(createLogDto: CreateModelDto) {
     const newModel = new Model();
-    newModel.id = createLogDto.id;
+    newModel.name = createLogDto.name;
 
     return newModel;
   }
 
   updateModel(UpdateModelDto: UpdateModelDto) {
     const newModel = new Model();
-    newModel.id = UpdateModelDto.id;
+    newModel.name = UpdateModelDto.name;
 
     return newModel;
   }

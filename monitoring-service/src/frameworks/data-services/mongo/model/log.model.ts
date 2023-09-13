@@ -1,21 +1,24 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Model } from './model.model';
 import { HttpStatus } from '@nestjs/common';
+import mongoose from 'mongoose';
+import { Model } from './model.model';
 
 export type LogDocument = Log & Document;
 
 @Schema()
 export class Log {
-  @Prop({ required: true, unique: true })
-  id: number;
   @Prop()
   predictionId: number;
-  @Prop()
+
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Model', required: true })
   model: Model;
+
   @Prop()
   status: HttpStatus;
+
   @Prop()
   timestamp: Date;
+
   @Prop()
   responseTime: number;
 }

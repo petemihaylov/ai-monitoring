@@ -1,7 +1,7 @@
 import { Controller, Get, Param, Post, Body, Put } from '@nestjs/common';
 import { CreateLogDto, UpdateLogDto } from '../core/dtos';
-import { LogUseCases } from 'src/use-cases/log/log.use-case';
-import { LogFactoryService } from 'src/use-cases/log/log-factory.service';
+import { LogUseCases } from '../use-cases/log/log.use-case';
+import { LogFactoryService } from '../use-cases/log/log-factory.service';
 
 @Controller('api/log')
 export class LogController {

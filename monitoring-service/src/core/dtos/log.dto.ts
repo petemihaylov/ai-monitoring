@@ -1,22 +1,18 @@
-import { IsNotEmpty } from 'class-validator';
-import { ApiProperty, PartialType } from '@nestjs/swagger';
+import { IsNotEmpty, IsDate } from 'class-validator';
 import { HttpStatus } from '@nestjs/common';
-import { Model } from '../entities/model.entity';
+import { PartialType } from '@nestjs/swagger';
 
 export class CreateLogDto {
-  @ApiProperty()
-  id: number;
-
-  @ApiProperty()
+  @IsNotEmpty()
   predictionId: number;
 
-  @ApiProperty()
-  model: Model;
+  @IsNotEmpty()
+  modelId: any;
 
   @IsNotEmpty()
   status: HttpStatus;
 
-  @IsNotEmpty()
+  @IsDate()
   timestamp: Date;
 
   @IsNotEmpty()

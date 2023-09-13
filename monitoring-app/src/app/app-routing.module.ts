@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PredictionsComponent } from './predictions/predictions.component';
-import { MonitoringComponent } from './monitoring/monitoring.component';
+import { PredictionsComponent } from './components/predictions/predictions.component';
+import { MonitoringComponent } from './components/monitoring/monitoring.component';
 
 const routes: Routes = [
   { path: 'predictions', component: PredictionsComponent },

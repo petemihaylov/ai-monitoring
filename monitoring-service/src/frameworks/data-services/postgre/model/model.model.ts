@@ -4,7 +4,7 @@ import { Log } from './log.model';
 @Entity()
 export class Model {
   @PrimaryGeneratedColumn()
-  id: number;
+  name: string;
 
   @OneToMany(() => Log, (log) => log.model)
   logs: Log[];

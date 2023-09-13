@@ -5,7 +5,7 @@ export type ModelDocument = Model & Document;
 @Schema()
 export class Model {
   @Prop({ required: true, unique: true })
-  id: number;
+  name: string;
 }
 
 export const ModelSchema = SchemaFactory.createForClass(Model);

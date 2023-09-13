@@ -10,23 +10,23 @@ export class MongoGenericRepository<T> implements IGenericRepository<T> {
     this._populateOnFind = populateOnFind;
   }
 
-  async getAll(): Promise<T[]> {
-    return await this._repository.find().populate(this._populateOnFind).exec();
+  getAll(): Promise<T[]> {
+    return this._repository.find().populate(this._populateOnFind).exec();
   }
 
-  async create(item: T): Promise<T> {
-    return await this._repository.create(item);
+  create(item: T): Promise<T> {
+    return this._repository.create(item);
   }
 
-  async update(id: string, item: T) {
-    return await this._repository.findByIdAndUpdate(id, item);
+  update(id: string, item: T) {
+    return this._repository.findByIdAndUpdate(id, item);
   }
-  async get(id: any): Promise<T> {
-    const document = await this._repository
+
+  get(id: any): Promise<T> {
+    return this._repository
       .findById(id)
       .populate(this._populateOnFind)
-      .exec();
-
-    return document ? (document.toObject() as T) : null;
+      .exec()
+      .then((x) => x as T);
   }
 }

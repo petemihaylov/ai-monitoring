@@ -7,19 +7,18 @@ export class LogUseCases {
   constructor(private dataServices: IDataServices) {}
 
   async getAllLogs(): Promise<Log[]> {
-    return this.dataServices.logRepository.getAll();
+    return this.dataServices.logs.getAll();
   }
 
   async getLogById(id: any): Promise<Log> {
-    return this.dataServices.logRepository.get(id);
+    return this.dataServices.logs.get(id);
   }
 
   async createLog(log: Log): Promise<Log> {
-    return this.dataServices.logRepository.create(log);
+    return this.dataServices.logs.create(log);
   }
 
   async updateLog(logId: any, log: Log): Promise<Log> {
-    await this.dataServices.logRepository.update(logId, log);
-    return this.dataServices.logRepository.get(logId);
+    return this.dataServices.logs.update(logId, log);
   }
 }

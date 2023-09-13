@@ -1,6 +1,12 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany } from 'typeorm';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+  OneToMany,
+} from 'typeorm';
 import { HttpStatus } from '@nestjs/common';
-import { Model } from './model.model'
+import { Model } from './model.model';
 
 @Entity()
 export class Log {
@@ -21,9 +27,7 @@ export class Log {
 
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   timestamp: Date;
-  
+
   @Column()
   responseTime: number;
 }
-
-

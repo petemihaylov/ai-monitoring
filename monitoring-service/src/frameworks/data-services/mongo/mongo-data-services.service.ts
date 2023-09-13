@@ -1,7 +1,7 @@
 import { Injectable, OnApplicationBootstrap } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { IDataServices, IGenericRepository, Log } from '../../../core';
+import { IDataServices } from '../../../core';
 import { MongoGenericRepository } from './mongo-generic-repository';
 import {
   Log as LogEntity,
@@ -14,19 +14,18 @@ import {
 export class MongoDataServices
   implements IDataServices, OnApplicationBootstrap
 {
+  public logs: MongoGenericRepository<LogEntity>;
+  public models: MongoGenericRepository<ModelEntity>;
+
   constructor(
-    @InjectModel(Log.name)
+    @InjectModel(LogEntity.name)
     private LogRepository: Model<LogDocument>,
-    @InjectModel(Log.name)
+    @InjectModel(ModelEntity.name)
     private ModelRepository: Model<ModelDocument>,
   ) {}
-  logRepository: IGenericRepository<LogEntity>;
-  modelRepository: IGenericRepository<ModelEntity>;
 
   onApplicationBootstrap() {
-    this.logRepository = new MongoGenericRepository<Log>(this.LogRepository);
-    this.modelRepository = new MongoGenericRepository<ModelEntity>(
-      this.ModelRepository,
-    );
+    this.logs = new MongoGenericRepository<LogEntity>(this.LogRepository);
+    this.models = new MongoGenericRepository<ModelEntity>(this.ModelRepository);
   }
 }

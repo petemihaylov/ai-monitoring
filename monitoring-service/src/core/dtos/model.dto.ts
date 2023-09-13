@@ -1,10 +1,9 @@
 import { IsNotEmpty } from 'class-validator';
-import { ApiProperty, PartialType } from '@nestjs/swagger';
+import { PartialType } from '@nestjs/swagger';
 
 export class CreateModelDto {
   @IsNotEmpty()
-  @ApiProperty()
-  id: number;
+  name: string;
 }
 
 export class UpdateModelDto extends PartialType(CreateModelDto) {}
