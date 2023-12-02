@@ -1,12 +1,20 @@
-import { Module } from '@nestjs/common';
-import { LogController, ModelController } from './controllers';
-import { DataServicesModule } from './services/data-services/data-services.module';
-import { LogUseCasesModule } from './use-cases/log/log-use-cases.module';
-import { ModelUseCasesModule } from './use-cases/model/model-use-cases.module';
-
+import {
+  MiddlewareConsumer,
+  Module,
+  NestModule,
+  RequestMethod,
+} from '@nestjs/common';
+import { LoggerMiddleware } from './common/middleware/logger.middleware';
+import { LogsModule } from './logs/logs.module';
 @Module({
-  imports: [DataServicesModule, LogUseCasesModule, ModelUseCasesModule],
-  controllers: [LogController, ModelController],
+  imports: [LogsModule],
+  controllers: [],
   providers: [],
 })
-export class AppModule {}
+export class AppModule implements NestModule {
+  async configure(consumer: MiddlewareConsumer) {
+    consumer
+      .apply(LoggerMiddleware)
+      .forRoutes({ path: 'logs', method: RequestMethod.GET });
+  }
+}
