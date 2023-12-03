@@ -1,7 +1,3 @@
-# Job application case
-
-Please read this complete assignment thoroughly before starting. Good luck with your case!
-
 ## Case description
 
 The current state of our product involves a front-end written in Angular and a back-end consisting of multiple microservices written in TypeScript ([NestJS](https://nestjs.com/)). These microservices together support the deployment, logging, monitoring and several other important functionalities. However, the product owner has decided that its time to start developing a new functionality, namely extensive monitoring of the current machine learning models in production. The plan is to set-up a new microservice with the following functionalities:
@@ -48,10 +44,3 @@ Create an Angular application with the following functionalities:
 ### Bonus
 
 Make a list or planning on additional tasks you want to perform to complete this feature for final review.
-
-## Submission process
-* Create a fork of this repo and add you answers there
-* Create a PR to this repo from you personal fork on your personal branch
-* Send a reminder to us that your PR is ready, so we can merge your PR and update our private submission fork so you submission will not be public.
-
-Good luck!
